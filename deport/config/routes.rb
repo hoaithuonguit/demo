@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   resources :line_items
   resources :carts
   get 'store/index'
-  get 'product/index'
-  get 'line_items/index'
+  post 'product/create'
   resources :products
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
