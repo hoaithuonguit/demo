@@ -13,6 +13,16 @@
   <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
   <span class="title"><%= @page_title %></span>
 </div>-->
+<div id="banner">
+  <%= form_tag store_index_path, class: 'locale' do %>
+      <%= select_tag 'set_locale',
+                     options_for_select(LANGUAGES, I18n.locale.to_s),
+                     onchange: 'this.form.submit()' %>
+      <%= submit_tag 'submit' %>
+      <%= javascript_tag "$('.locale input').hide()" %>
+  <% end %>
+  <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+  <span class="title"><%= @page_title %></span></div>
 <div id="colunms">
   <div id="site">
     <div id="cart">
