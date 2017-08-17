@@ -8,12 +8,14 @@ Rails.application.routes.draw do
   end
 
   resources :users
+=begin
   resources :orders
   resources :line_items
   resources :carts
   root 'store#index', as: 'store_index'
   get 'store/index'
   get 'product/create'
+=end
   #root to: 'store#index'
   resources :products do
     get :who_bought, on: :member
