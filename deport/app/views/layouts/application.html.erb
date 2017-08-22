@@ -9,10 +9,7 @@
 </head>
 
 <body class='<%= controller.controller_name %>'>
-<!--<div class="banner">
-  <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
-  <span class="title"><%= @page_title %></span>
-</div>-->
+
 <div id="banner">
   <%= form_tag store_index_path, class: 'locale' do %>
       <%= select_tag 'set_locale',
@@ -21,7 +18,7 @@
       <%= submit_tag 'submit' %>
       <%= javascript_tag "$('.locale input').hide()" %>
   <% end %>
-  <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+  <!--<%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>-->
   <span class="title"><%= @page_title %></span></div>
 <div id="colunms">
   <div id="site">
